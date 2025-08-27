@@ -1,0 +1,173 @@
+/* Global theme styles for full-page coverage */
+
+/* Ensure html and body take full height and apply theme */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark theme styles */
+[data-bs-theme="dark"] {
+  background-color: #212529 !important;
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] body {
+  background-color: #212529 !important;
+  color: #ffffff !important;
+}
+
+[data-bs-theme="dark"] .min-vh-100 {
+  background-color: #212529 !important;
+}
+
+[data-bs-theme="dark"] .container,
+[data-bs-theme="dark"] .container-fluid {
+  background-color: transparent !important;
+}
+
+/* Light theme styles */
+[data-bs-theme="light"] {
+  background-color: #f8f9fa !important;
+  color: #212529 !important;
+}
+
+[data-bs-theme="light"] body {
+  background-color: #f8f9fa !important;
+  color: #212529 !important;
+}
+
+[data-bs-theme="light"] .min-vh-100 {
+  background-color: #f8f9fa !important;
+}
+
+[data-bs-theme="light"] .container,
+[data-bs-theme="light"] .container-fluid {
+  background-color: transparent !important;
+}
+
+/* Ensure all main containers inherit theme */
+.main-container {
+  min-height: 100vh;
+  background-color: inherit;
+  color: inherit;
+}
+
+/* Fix for any white backgrounds in dark mode */
+[data-bs-theme="dark"] .bg-white {
+  background-color: #343a40 !important;
+}
+
+[data-bs-theme="dark"] .bg-light {
+  background-color: #495057 !important;
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Progress bar custom styles */
+.progress-bar-success {
+  background-color: #198754;
+}
+
+.progress-bar-warning {
+  background-color: #ffc107;
+}
+
+.progress-bar-danger {
+  background-color: #dc3545;
+}
+
+/* Achievement badges */
+.achievement-badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+/* Session cards hover effects */
+.session-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.session-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+[data-bs-theme="dark"] .session-card:hover {
+  box-shadow: 0 4px 8px rgba(255,255,255,0.1);
+}
+
+/* Ensure modals respect theme */
+[data-bs-theme="dark"] .modal-content {
+  background-color: #343a40;
+  color: #ffffff;
+  border-color: #495057;
+}
+
+[data-bs-theme="dark"] .modal-header {
+  border-bottom-color: #495057;
+}
+
+[data-bs-theme="dark"] .modal-footer {
+  border-top-color: #495057;
+}
+
+/* Fix form controls in dark mode */
+[data-bs-theme="dark"] .form-control {
+  background-color: #495057;
+  border-color: #6c757d;
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] .form-control:focus {
+  background-color: #495057;
+  border-color: #86b7fe;
+  color: #ffffff;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+[data-bs-theme="dark"] .form-select {
+  background-color: #495057;
+  border-color: #6c757d;
+  color: #ffffff;
+}
+
+/* Fix table styles in dark mode */
+[data-bs-theme="dark"] .table {
+  color: #ffffff;
+}
+
+[data-bs-theme="dark"] .table-hover tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.075);
+}
+
+/* Fix alert styles */
+[data-bs-theme="dark"] .alert-info {
+  background-color: #0c5460;
+  border-color: #0a4d59;
+  color: #b8daff;
+}
+
+[data-bs-theme="dark"] .alert-success {
+  background-color: #0f5132;
+  border-color: #0a4128;
+  color: #d1e7dd;
+}
+
+[data-bs-theme="dark"] .alert-warning {
+  background-color: #664d03;
+  border-color: #5a4103;
+  color: #fff3cd;
+}
+
+[data-bs-theme="dark"] .alert-danger {
+  background-color: #842029;
+  border-color: #721c24;
+  color: #f8d7da;
+}
